@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>내부 스타일 시트</title>
+	<style>
+		#id1{
+			color: blue;
+			background-color: pink;
+		}
+		.class1 {
+			color: red;
+			background-color:green;
+		}
+		h3.class1{
+			color: navy;
+			background-color: red;
+		}
+		p[text] {
+			color: red;
+			background-color: gray;
+		}
+		h2[text="attr3"] {
+			color: green;
+			background-color:pink;
+		}
+		
+		a:link {color:blue; text-decoration:underline;}
+		a:visited {color:red;}
+		a:hover {text-decoration: overline;}
+		a:active {background-color: yellow;}
+		
+		div {
+			width: 200px; height: 100px; color:blue;
+			background: green; opacity: 0.9;
+		}
+		div:hover {
+			width: 400px; height:50px; color:red;
+			background: yellow; opacity: 0.5;
+			transition: all 1.5s linear 0.5s;
+		}
+		
+		div2 ul {color: red;}
+		div2 h2 {color: yellow; background-color:purple;}
+		
+		body > div3 > h3 { color: red;}
+		body > p {color:green; background-color: yellow;}
+		body > h3 > tel > home { color: blue;}
+	</style>
+</head>
+<body>
+	<h1 id="id1">ID1 사용해보기</h1>
+	<h1 id="id2">ID 선택자는 재사용이 안됨</h1>
+	<h2 id="id2">ID 선택자는 재사용이 안됨</h1>
+	
+	<h1 class="class1">Class1 사용해보기</h1>
+	<h3 class="class1">element + class 재지정 사용</h3>
+	<h1 class="class1">Class1은 재사용 가능</h1>
+	
+	<p text="attr1">text 속성 이름 선택자</p>
+	<h2 text="attr3">text 속성과 속성값 선택자</h2>
+	</p>
+	
+	<p><a href="http://knu.ac.kr" target="_blink">경북대학교 웹사이트</a> : 가상클래스 test </p>
+	<div>마우스를 올리면 박스가 늘어납니다.</div>
+	
+	<div2>
+		<h2>Descendant Selector</h2>
+		<ul>후손 선택자
+			<li>자식의 자식(후손1) </li>
+			<li>자식의 자식(후속2) </li>
+		</ul>
+	</div2>
+	
+	<div3>
+		<h3>Child Selector</h3>
+	</div3>
+	<p>자식 선택자</p>
+	<h3>
+		<sno>123456</sno></br>
+		<std>박형석</std></br>
+		<tel>
+			<home>010-7287-8770</home>
+		</tel>
+	</h3>
+	
+
+</body>
+</html>
