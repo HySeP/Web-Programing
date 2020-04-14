@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#box1{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			border: 1px solid;
+			animation: colorbox 4s infinite;
+			animation-direction: alternate;
+			border-top-left-radius: 100%;
+		}
+		#box2{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			border: 1px solid;
+			animation: colorbox 4s infinite;
+			animation-direction: alternate;
+			animation-delay: 1s;
+			border-top-right-radius: 100%;
+		}
+		#box3{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			position: relative;
+			border: 1px solid;
+			animation: colorbox 4s infinite;
+			animation-direction: alternate;
+			animation-delay: 2s;
+			border-bottom-left-radius: 100%;
+			clear: both;
+		}
+		#box4{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			border: 1px solid;
+			animation: colorbox 4s infinite;
+			animation-direction: alternate;
+			animation-delay: 3s;
+			border-bottom-right-radius: 100%;
+		}
+		@keyframes colorbox
+		{
+            from { background: red; }
+            25% { background: blue;}
+            50% { background: yellow;}
+            75% { background: green;}
+            to { background: red; }
+        }
+	</style>
+<meta charset="EUC-KR">
+<title>원 네 개의면 색깔 애니메이션</title>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+
+</body>
+</html>

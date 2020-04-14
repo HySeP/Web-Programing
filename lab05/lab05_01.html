@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>구구단</title>
+</head>
+<body>
+	<p>구구단 프로그램</p>
+	<script>
+	
+		var x, y;
+		document.write("<table width='80%' border='1' style='margin: auto; text-align: left'>");
+		
+		for(x=1; x<10; x++){
+			document.write("<th>" + x + "단</th>")
+		}
+		
+		for(x=1; x<10; x++){
+			document.write("<tr>");
+			for(y=1; y<10; y++){
+				document.write("<td>" + x + "*" + y + "=" + (x * y) + "</td>" );
+			}
+			document.write("</tr>")
+			
+		}
+		document.write("</table>");
+	
+	</script>
+
+</body>
+</html>
