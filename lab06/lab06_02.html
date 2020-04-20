@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>구구단 배열</title>
+</head>
+<body>
+	<script>
+	
+		var x, y;
+		var gugu=[];
+		
+		for(var k=0; k<10; k++){
+			gugu[k] = new Array(10);
+		}
+		
+		document.write("<table border='1' style='text-align: left'>");
+		
+		for(x=1; x<10; x++){
+			document.write("<th>" + x + "단</th>")
+		}
+		
+		for(x=1; x<10; x++){
+			document.write("<tr>");
+			for(y=1; y<10; y++){
+				document.write("<td>" + x + "*" + y + "=" + (x * y) + "</td>" );
+				gugu[x][y] = x*y;
+			}
+			document.write("</tr>")
+			
+		}
+		document.write("</table>");
+		
+		
+		function printAll(){
+			for(var i=1; i<gugu.length; i++){
+				for(var j=1; j<gugu[0].length; j++){
+					document.write(gugu[i][j]+" ");
+				}
+				document.write("<p/>");
+			}
+			document.write("<a href='lab06_02.html'>돌아가기</a>");
+		}
+	
+	</script>
+	<br/><button type="button" onclick="printAll()">구구단 배열 데이터 보기</button>
+
+</body>
+</html>
